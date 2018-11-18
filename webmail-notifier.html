@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('webmail-notifier', {
+    category: 'function',
+    color: '#ffffff',
+    defaults: {
+      name: {
+        value: ""
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function() {
+      return this.name || "webmail-notifier";
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="webmail-notifier">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="webmail-notifier">
+  <p>A simple node the controls the webmail notifier color</p>
+
+  <p>The <code>msg.payload</code> is used to specify the led (<i>red</i>,
+  <i>green</i>, <i>blue</i>) to be switched on. If the specified led is
+  <i>off</i> then all the leds will be switched off.</p>
+</script>

@@ -1,0 +1,31 @@
+{
+  "name": "red-contrib-webmail-notifier",
+  "version": "0.0.1",
+  "description": "A Node-RED node to talk to a webmail notifier",
+  "main": "webmail-notifier.js",
+  "node-red": {
+      "nodes": {
+          "webmail-notifier": "webmail-notifier.js"
+      }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borjator/node-red-contrib-webmail-notifier.git"
+  },
+  "keywords": [
+    "node-red",
+    "webmail",
+    "notifier",
+    "usb",
+    "led"
+  ],
+  "author": "Borja Tornero",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/borjator/node-red-contrib-webmail-notifier/issues"
+  },
+  "homepage": "https://github.com/borjator/node-red-contrib-webmail-notifier#readme"
+}
