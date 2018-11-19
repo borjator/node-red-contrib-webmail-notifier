@@ -1,14 +1,18 @@
 <script type="text/javascript">
   RED.nodes.registerType('webmail-notifier', {
     category: 'function',
-    color: '#ffffff',
+    color: '#ffff00',
     defaults: {
+      leddev: {
+        value: ""
+      },
       name: {
         value: ""
       }
     },
     inputs: 1,
     outputs: 1,
+    icon: "light.png",
     label: function() {
       return this.name || "webmail-notifier";
     }
@@ -17,8 +21,12 @@
 
 <script type="text/x-red" data-template-name="webmail-notifier">
   <div class="form-row">
+    <label for="node-input-leddev"><i class="fa fa-tag"></i> Led device</label>
+    <input type="text" id="node-input-leddev" placeholder="riso_kagaku0">
+  </div>
+  <div class="form-row">
     <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-    <input type="text" id="node-input-name" placeholder="name">
+    <input type="text" id="node-input-name" placeholder="Name">
   </div>
 </script>
 
