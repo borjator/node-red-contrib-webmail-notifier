@@ -13,7 +13,12 @@ module.exports = function(RED) {
         const ledPath = "/sys/class/leds/" + this.ledDevice + ":";
 
         function switchLedError(err) {
-            node.log("Error setting the led brightness: " + err);
+            if (err) {
+                node.log("Error setting the led brightness: " + err);
+            } else {
+                node.log("Led brightness set correctly");
+            }
+
         }
 
         function switchLedOn(led) {
@@ -30,15 +35,15 @@ module.exports = function(RED) {
             switch(msg.payload) {
                 case "red":
                     switchLedsOff();
-                    switchLedOn("red");
+                    setTimeout(switchLedOn, 1000, "red");
                     break;
                 case "green":
                     switchLedsOff();
-                    switchLedOn("green");
+                    setTimeout(switchLedOn, 1000, "green");
                     break;
                 case "blue":
                     switchLedsOff();
-                    switchLedOn("blue");
+                    setTimeout(switchLedOn, 1000, "blue");
                     break;
                 case "off":
                     switchLedsOff();
